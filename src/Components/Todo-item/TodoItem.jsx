@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
+import "./TodoItem.css";
 
 function TodoItem({ todoItem }) {
   return (
