@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { TodoItem } from "../index.js";
 import "./TodoList.css";
 
 function TodoList({ toDoList }) {
@@ -7,7 +8,8 @@ function TodoList({ toDoList }) {
     <ul className="toDo-list">
       {toDoList.map((todo, index) => (
         <li key={todo.id} className="toDo-list__item">
-          {/* Компонент toDoItem */}
+          <p className="toDo-list__item-index">{index + 1}</p>
+          <TodoItem todoItem={todo} />
         </li>
       ))}
     </ul>
