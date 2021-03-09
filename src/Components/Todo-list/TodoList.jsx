@@ -14,8 +14,8 @@ function TodoList({ toDoList }) {
   );
 }
 
-TodoList.PropTypes = {
-  toDoList: arrayOf(PropTypes.object).isRequired,
+TodoList.propTypes = {
+  toDoList: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default TodoList;
