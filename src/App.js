@@ -3,15 +3,17 @@ import {TodoList} from './Components'
 import './App.css';
 
 function App() {
-  const [toDoList, setToDoList] = useState([]);
+  const [todoList, setTodoList] = useState([]);
   return (
     <div className="app">
       <header className="app__header">
         <span className="app__header-title">DO YOUR TODO</span>
-        {
-          toDoList.length ? <TodoList toDoList={toDoList}/> : <h2>Пока нет дел</h2>
-        }
       </header>
+      <main>
+      {
+        todoList.length ? <TodoList todoList={todoList}/> : <h2>Пока нет дел</h2>
+      }
+      </main>
     </div>
   );
 }

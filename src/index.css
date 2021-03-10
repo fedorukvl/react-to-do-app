@@ -7,8 +7,8 @@ a {
   color: black;
 }
 ul {
-  margin-left: none;
-  padding-left: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 li {
   list-style-type: none;

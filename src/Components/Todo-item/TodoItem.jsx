@@ -6,6 +6,7 @@ function TodoItem({ todoItem }) {
   return (
     <Fragment>
       <h2 className="toDo-list__item-title">{todoItem.title}</h2>
+      <br />
       <div className="toDo-list__item-information">
         <p className="toDo-list__item-description">{todoItem.description}</p>
         <button className="toDo-list__delete-button">x</button>
