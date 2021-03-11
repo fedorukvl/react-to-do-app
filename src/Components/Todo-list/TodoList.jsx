@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import { TodoItem } from "../index.js";
 import "./TodoList.css";
 
-function TodoList({ todoList }) {
+function TodoList({ todoList, removeTodo }) {
   return (
     <ul className="todo-list">
-      {todoList.map((todo) => (
+      {todoList.map((todo, index) => (
         <li key={todo.id} className="todo-list__item">
-          <TodoItem todoItem={todo} />
+          <TodoItem todoItem={todo} index={index} removeTodo={removeTodo} />
         </li>
       ))}
     </ul>
@@ -17,6 +17,7 @@ function TodoList({ todoList }) {
 
 TodoList.propTypes = {
   todoList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removeTodo: PropTypes.func,
 };
 
 export default TodoList;

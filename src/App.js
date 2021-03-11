@@ -10,6 +10,10 @@ function App() {
       id: todoList.length+1,
       ...todo,
     }]))
+  };
+
+  const removeTodo = (index) =>{
+    setTodoList(prev =>prev.splice(index,1));
   }
 
   return (
@@ -20,7 +24,7 @@ function App() {
       <main>
       <AddTodo addTodoItem={addTodoItem}/>
       {
-        todoList.length ? <TodoList todoList={todoList}/> : <h2 className="app__warning">Пока нет дел</h2>
+        todoList.length ? <TodoList todoList={todoList} removeTodo={removeTodo}/> : <h2 className="app__warning">Пока нет дел</h2>
       }
       </main>
     </div>
