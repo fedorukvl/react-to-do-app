@@ -1,0 +1,23 @@
+.add-todo {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-todo .add-todo__input,
+.add-todo .add-todo__submit {
+  outline: none;
+  border: 2px solid rgb(32, 158, 32);
+  border-radius: 5px;
+  padding: 5px;
+}
+.add-todo .add-todo__submit {
+  margin-left: -30px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+}
+.add-todo .add-todo__submit:hover {
+  background-color: green;
+  color: white;
+}

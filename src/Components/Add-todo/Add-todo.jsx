@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import "./Add-todo.css";
 
 function AddTodo({ addTodoItem }) {
   let [todo, setTodo] = useState("");
