@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {TodoList} from './Components'
+import {AddTodo, TodoList} from './Components'
 import './App.css';
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
         <span className="app__header-title">DO YOUR TODO</span>
       </header>
       <main>
+      <AddTodo/>
       {
         todoList.length ? <TodoList todoList={todoList}/> : <h2>Пока нет дел</h2>
       }
