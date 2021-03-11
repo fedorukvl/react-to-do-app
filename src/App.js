@@ -12,7 +12,7 @@ function App() {
       <main>
       <AddTodo/>
       {
-        todoList.length ? <TodoList todoList={todoList}/> : <h2>Пока нет дел</h2>
+        todoList.length ? <TodoList todoList={todoList}/> : <h2 className="app__warning">Пока нет дел</h2>
       }
       </main>
     </div>
