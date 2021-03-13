@@ -1,20 +1,33 @@
-.toDo-list__item-information {
+.toDo-list__item-information,
+.toDo-list__item-information_complited {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid black;
+  border: 2px solid red;
   border-radius: 5px;
   padding: 10px;
+}
+.toDo-list__item-information_complited {
+  border: 2px solid rgb(32, 158, 32);
 }
 .toDo-list__item-title {
   font-size: 23px;
   text-align: center;
 }
-.toDo-list__item-information .toDo-list__item-description {
+.toDo-list__item-information .toDo-list__switchers,
+.toDo-list__item-information_complited .toDo-list__switchers {
+  display: flex;
+  align-items: center;
+}
+.toDo-list__item-information .toDo-list__item-description,
+.toDo-list__item-information_complited .toDo-list__item-description {
   font-size: 17px;
   margin: 0;
 }
-.toDo-list__item-information .toDo-list__delete-button {
+.toDo-list__item-information .toDo-list__switchers .toDo-list__delete-button,
+.toDo-list__item-information_complited
+  .toDo-list__switchers
+  .toDo-list__delete-button {
   border-radius: 50%;
   color: white;
   font-weight: bold;
@@ -23,4 +36,11 @@
   height: 25px;
   background-color: red;
   border: 1px solid red;
+}
+.toDo-list__item-information .toDo-list__switchers .toDo-list__item-status,
+.toDo-list__item-information_complited
+  .toDo-list__switchers
+  .toDo-list__item-status {
+  width: 25px;
+  height: 25px;
 }
