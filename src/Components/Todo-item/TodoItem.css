@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   border: 2px solid red;
+  overflow: auto;
   border-radius: 5px;
   padding: 10px;
 }

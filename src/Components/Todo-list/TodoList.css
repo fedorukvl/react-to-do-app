@@ -2,5 +2,14 @@
   border: 1px solid black;
   padding: 0 20px 20px 20px;
   width: 500px;
+  height: 300px;
+  overflow: auto;
   border-radius: 5px;
+}
+::-webkit-scrollbar {
+  width: 3.5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(119, 119, 119);
+  border-radius: 3px;
 }
