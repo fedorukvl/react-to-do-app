@@ -12,6 +12,8 @@ function AddTodo({ addTodoItem }) {
       title: todoTitle,
       description: todoDescription,
     });
+    setTodoTitle("");
+    setTodoDescription("");
   };
 
   const setData = (e) => {
