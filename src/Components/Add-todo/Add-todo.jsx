@@ -14,6 +14,19 @@ function AddTodo({ addTodoItem }) {
     });
   };
 
+  const setData = (e) => {
+    switch (e.target.id) {
+      case "todoItem-title":
+        setTodoTitle(e.target.value);
+        break;
+      case "todoItem-description":
+        setTodoDescription(e.target.value);
+        break;
+      default:
+        return false;
+    }
+  };
+
   return (
     <form className="add-todo" onSubmit={addTodo}>
       <label className="add-todo__label">Добавьте todo</label>
@@ -25,7 +38,7 @@ function AddTodo({ addTodoItem }) {
           placeholder="Заголовок"
           required
           value={todoTitle}
-          onChange={(e) => setTodoTitle(e.target.value)}
+          onChange={setData}
         />
         <input
           type="text"
@@ -33,7 +46,7 @@ function AddTodo({ addTodoItem }) {
           className="add-todo__input"
           placeholder="Описание"
           value={todoDescription}
-          onChange={(e) => setTodoDescription(e.target.value)}
+          onChange={setData}
         />
         <button className="add-todo__submit" type="submit">
           Добавить
