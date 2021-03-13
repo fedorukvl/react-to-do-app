@@ -4,12 +4,14 @@ import './App.css';
 
 function App() {
   const [todoList, setTodoList] = useState([]);
+  const [generatedId,setId] = useState(1);
 
   const addTodoItem = (todo)=>{
     setTodoList(prev => prev.concat([{
-      id: todoList.length+1,
+      id: generatedId,
       ...todo,
-    }]))
+    }]));
+    setId(prev=>prev+1);
   };
 
   const removeTodo = (index) =>{
