@@ -14,9 +14,9 @@ function App() {
     setId(prev=>prev+1);
   };
 
-  const removeTodo = (index) =>{
-    setTodoList(prev =>prev.splice(index,1));
-  }
+  const removeTodo = (todoId) =>{
+    setTodoList(prev => prev.filter(todo => todo.id !== todoId));
+  };
 
   return (
     <div className="app">

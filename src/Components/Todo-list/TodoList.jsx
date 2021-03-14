@@ -6,9 +6,9 @@ import "./TodoList.css";
 function TodoList({ todoList, removeTodo }) {
   return (
     <ul className="todo-list">
-      {todoList.map((todo, index) => (
+      {todoList.map((todo) => (
         <li key={todo.id} className="todo-list__item">
-          <TodoItem todoItem={todo} index={index} removeTodo={removeTodo} />
+          <TodoItem todoItem={todo} removeTodo={removeTodo} />
         </li>
       ))}
     </ul>

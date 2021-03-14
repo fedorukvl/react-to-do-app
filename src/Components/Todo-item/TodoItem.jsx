@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import "./TodoItem.css";
 
-function TodoItem({ todoItem, index, removeTodo }) {
+function TodoItem({ todoItem, removeTodo }) {
   const [isComplited, setCompleted] = useState(false);
 
   const handleChange = () => {
@@ -10,7 +10,7 @@ function TodoItem({ todoItem, index, removeTodo }) {
   };
 
   const removeTodoItem = () => {
-    removeTodo(index);
+    removeTodo(todoItem.id);
   };
 
   return (
@@ -44,7 +44,6 @@ function TodoItem({ todoItem, index, removeTodo }) {
 TodoItem.propTypes = {
   todoItem: PropTypes.object.isRequired,
   removeTodo: PropTypes.func,
-  index: PropTypes.number,
 };
 
 export default TodoItem;
