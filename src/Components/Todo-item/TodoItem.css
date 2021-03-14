@@ -45,3 +45,9 @@
   width: 25px;
   height: 25px;
 }
+@media (max-width: 480px) {
+  .toDo-list__item-information .toDo-list__item-description,
+  .toDo-list__item-information_complited .toDo-list__item-description {
+    overflow-wrap: anywhere;
+  }
+}
